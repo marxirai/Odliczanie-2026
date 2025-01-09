@@ -3,60 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Strona z odliczaniem do Nowego Roku 2026. Sprawdź, ile dni pozostało do nadchodzącego roku!">
+  <meta name="keywords" content="odliczanie, 2026, Nowy Rok, countdown">
+  <meta name="author" content="Twoje Imię">
+  <meta name="google-site-verification" content="Q7l2jFqdVdcRJCBh3ofwHTqThFcWeAJ0Uhf97bNnodA" />
   <title>Odliczanie do 2026</title>
   <style>
+    /* Twoje style */
     body {
       font-family: Arial, sans-serif;
-      background-color: #282c34;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
       text-align: center;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
     }
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
+      font-size: 2.5rem;
     }
     #countdown {
-      font-size: 2em;
-      font-weight: bold;
+      font-size: 2rem;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Odliczanie do Nowego Roku 2026</h1>
-    <div id="countdown">Ładowanie...</div>
-  </div>
+  <h1>Odliczanie do Nowego Roku 2026</h1>
+  <div id="countdown">Ładowanie...</div>
 
   <script>
+    // Funkcja do odliczania
     function updateCountdown() {
-      const now = new Date();
-      const targetDate = new Date('2026-01-01T00:00:00');
-      const timeDiff = targetDate - now;
+      const now = new Date(); // Aktualna data
+      const targetDate = new Date('January 1, 2026 00:00:00'); // Cel (1 stycznia 2026)
+      const timeDiff = targetDate - now; // Różnica w czasie
 
-      if (timeDiff <= 0) {
-        document.getElementById('countdown').innerText = "Witaj w 2026 roku!";
-        return;
-      }
-
+      // Oblicz dni, godziny, minuty i sekundy
       const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-      document.getElementById('countdown').innerText =
-        `${days} dni, ${hours} godz., ${minutes} min., ${seconds} sek.`;
-    }
-
-    // Aktualizuj licznik co sekundę
-    setInterval(updateCountdown, 1000);
-
-    // Wywołaj raz na początku, by uniknąć opóźnienia
-    updateCountdown();
-  </script>
-</body>
-</html>
+      const sec
