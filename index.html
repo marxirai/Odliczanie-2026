@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odliczanie do 2026</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    #countdown {
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Odliczanie do Nowego Roku 2026</h1>
+  <div id="countdown">Ładowanie...</div>
+
+  <script>
+    // Funkcja do odliczania
+    function updateCountdown() {
+      const now = new Date(); // Aktualna data
+      const targetDate = new Date('January 1, 2026 00:00:00'); // Cel (1 stycznia 2026)
+      const timeDiff = targetDate - now; // Różnica w czasie
+
+      // Oblicz dni, godziny, minuty i sekundy
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+      // Wyświetl odliczanie w elemencie #countdown
+      document.getElementById('countdown').innerHTML = 
+        `${days} dni, ${hours} godz., ${minutes} min., ${seconds} sek.`;
+
+      // Jeśli odliczanie się skończy
+      if (timeDiff <= 0) {
+        clearInterval(interval);
+        document.getElementById('countdown').innerHTML = "Szczęśliwego Nowego Roku 2026!";
+      }
+    }
+
+    // Natychmiastowa aktualizacja po załadowaniu strony
+    updateCountdown();
+
+    // Aktualizuj odliczanie co 1 sekundę
+    const interval = setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
