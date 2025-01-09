@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Strona główna -->
+  <url>
+    <loc>https://marxirai.github.io/Odliczanie-2026/</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Unikalna fraza: odliczanie do 2026 -->
+  <url>
+    <loc>https://marxirai.github.io/Odliczanie-2026/odliczanie-2026</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Unikalna fraza: countdown 2026 -->
+  <url>
+    <loc>https://marxirai.github.io/Odliczanie-2026/countdown-2026</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Unikalna fraza: Nowy Rok 2026 -->
+  <url>
+    <loc>https://marxirai.github.io/Odliczanie-2026/nowy-rok-2026</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Unikalna fraza: marxirai odliczanie -->
+  <url>
+    <loc>https://marxirai.github.io/Odliczanie-2026/marxirai-odliczanie</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Unikalna fraza: 2026 odliczanie -->
+  <url>
+    <loc>https://marxirai.github.io/Odliczanie-2026/2026-odliczanie</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Unikalna fraza: countdown to 2026 -->
+  <url>
+    <loc>https://marxirai.github.io/Odliczanie-2026/countdown-to-2026</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
