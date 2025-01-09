@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odliczanie do 2026</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #282c34;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    #countdown {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Odliczanie do Nowego Roku 2026</h1>
+    <div id="countdown">Ładowanie...</div>
+  </div>
+
+  <script>
+    function updateCountdown() {
+      const now = new Date();
+      const targetDate = new Date('2026-01-01T00:00:00');
+      const timeDiff = targetDate - now;
+
+      if (timeDiff <= 0) {
+        document.getElementById('countdown').innerText = "Witaj w 2026 roku!";
+        return;
+      }
+
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+      document.getElementById('countdown').innerText =
+        `${days} dni, ${hours} godz., ${minutes} min., ${seconds} sek.`;
+    }
+
+    // Aktualizuj licznik co sekundę
+    setInterval(updateCountdown, 1000);
+
+    // Wywołaj raz na początku, by uniknąć opóźnienia
+    updateCountdown();
+  </script>
+</body>
+</html>
